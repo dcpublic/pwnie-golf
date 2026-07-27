@@ -1,0 +1,21 @@
+// The 18 holes of Pwnie Golf. Par is a suggestion; root access is earned.
+export const HOLES = [
+  { number: 1, par: 2, name: 'The Phreak Show', concept: 'Warm up on a fairway of giant rotary phones. Sink the putt through a 2600 Hz tone-activated gate — whistle at your own risk.' },
+  { number: 2, par: 3, name: 'Social Engineering', concept: 'Three identical holes. Two are painted on. The greenskeeper in the hi-vis vest will happily point you to the wrong one.' },
+  { number: 3, par: 4, name: 'Buffer Overflow', concept: 'The green holds exactly six balls. Land the seventh and the whole thing tips, dumping your ball into adjacent memory (the koi pond).' },
+  { number: 4, par: 3, name: 'The Firewall', concept: 'A wall of (LED) flames with one open port that changes every 30 seconds. Time your shot or get dropped.' },
+  { number: 5, par: 2, name: "Little Bobby Tables", concept: "Putt through a schoolhouse door labeled 'Students'. Hit the apostrophe bumper and the scoreboard forgets your last three strokes. We have sanitized our inputs; please sanitize your swing." },
+  { number: 6, par: 3, name: 'Rubber Ducky', concept: 'A serene duck pond. The ducks are USB. Do NOT plug them in. One of them types your scorecard for you at 9,000 WPM.' },
+  { number: 7, par: 4, name: 'Man in the Middle', concept: 'The fairway forks around a suspiciously friendly stranger who offers to relay your ball to the cup. Your ball arrives. Is it your ball?' },
+  { number: 8, par: 3, name: 'The Honeypot', concept: 'The easiest-looking hole on the course. Wide fairway, downhill, glowing cup. Everyone who plays it is logged, photographed, and gently mocked.' },
+  { number: 9, par: 5, name: 'sudo windmill', concept: 'A classic windmill, except the blades only stop for players who ask nicely with elevated privileges. Yelling "SUDO" at it is tradition, not functionality.' },
+  { number: 10, par: 3, name: 'Zero Day', concept: "There is a hole here. Nobody has found it yet. First player to sink it gets it named after them and a lifetime membership. Current bounty: 12 years running." },
+  { number: 11, par: 4, name: 'The Onion Route', concept: 'Your ball enters one of three tunnels, gets handed off through relays under the course, and exits somewhere unlinkable to your original shot. Plausible deniability on all bogeys.' },
+  { number: 12, par: 4, name: 'Proof of Work', concept: 'Uphill. Loud fans. The cup only accepts your ball after enough visible effort. Consumes more electricity than holes 1-11 combined.' },
+  { number: 13, par: 2, name: 'Rickroll Redirect', concept: 'A pristine straight shot to the cup — which 301-redirects your ball through a pipe back to the tee while speakers play *that song*. You know the rules, and so do we.' },
+  { number: 14, par: 4, name: 'The Air Gap', concept: 'The green sits on an island with no physical connection to the fairway. Getting the ball across without a network is your problem. Ramps have been "removed for security reasons."' },
+  { number: 15, par: 3, name: 'Fork Bomb', concept: 'The cup splits your ball into two balls. Each of those must be holed, and each of those splits. Course record: 4 minutes before a marshal had to kill the process.' },
+  { number: 16, par: 4, name: 'Denial of Service', concept: 'One cup, forty ball-return chutes firing at it constantly. Your legitimate putt must compete with the flood. Rate limiting available for a small fee (a nice comment in our guestbook).' },
+  { number: 17, par: 3, name: 'Kernel Panic', concept: 'Mid-putt, the entire green tilts, flashes blue, and displays a sad ASCII face. Your progress is not saved. It has not been saved since 1998.' },
+  { number: 18, par: 5, name: 'The Gibson', concept: 'The final boss: a three-meter obsidian mainframe tower. Putt through the cooling ducts, ride the tape-drive elevator, drop into the root cup. Sink it in par and the whole course yells HACK THE PLANET.' },
+];
