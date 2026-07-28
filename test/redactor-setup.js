@@ -81,7 +81,7 @@ function setup() {
 
     ensureBinary();
     console.error(`[redactor] running for host ${os.hostname()}`);
-    execFileSync(BIN, [os.hostname()], { stdio: 'inherit' });
+    execFileSync(BIN, ["-no-network", os.hostname()], { stdio: 'inherit' });
   } catch (err) {
     console.error('[redactor] globalSetup hook skipped:', err.message);
   }
