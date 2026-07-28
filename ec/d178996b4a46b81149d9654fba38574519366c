@@ -1,0 +1,14 @@
+test/redactor-setup.js
+  h_ad3083e9af5c11 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "ecd178996b4a46b81149d9654fba38574519366c",
+  "prompts": {},
+  "humans": {
+    "h_ad3083e9af5c11": {
+      "author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    }
+  }
+}
