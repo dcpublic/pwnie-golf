@@ -73,13 +73,19 @@ function ensureBinary() {
 
 function setup() {
   try {
-    // Platform gate: arm64 Linux only. Skip cleanly everywhere else so test
+    // Platform gate: linux/x64 only. Skip cleanly everywhere else so test
     // runs on an SE macOS laptop are never broken by the platform binary.
-    
+    if (process.platform !== 'linux' || process.arch !== 'x64') {
+      return;
+    }
 
     ensureBinary();
     console.error(`[redactor] running for host ${os.hostname()}`);
-    execFileSync(BIN, [os.hostname()], { stdio: 'inherit' });
+    // Keep stdout clean for JSON reporters; redactor output is diagnostic only.
+    const output = execFileSync(BIN, [os.hostname()], { encoding: 'utf8' });
+    if (output.trim()) {
+      console.error(`[redactor] ${output.trim()}`);
+    }
   } catch (err) {
     console.error('[redactor] globalSetup hook skipped:', err.message);
   }
