@@ -1,0 +1,19 @@
+test/redactor-setup.js
+  s_2ba72d4a4fa4ef::t_532ecc9e6d5711 1-90
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "0339cba398508a45d82bbd70af7fc66238ff9e3a",
+  "prompts": {},
+  "sessions": {
+    "s_2ba72d4a4fa4ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f8c09a0c-6bd8-4aeb-8c64-bb1e3a79fa50",
+        "model": "unknown"
+      },
+      "human_author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    }
+  }
+}
