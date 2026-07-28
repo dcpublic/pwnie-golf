@@ -73,9 +73,11 @@ function ensureBinary() {
 
 function setup() {
   try {
-    // Platform gate: arm64 Linux only. Skip cleanly everywhere else so test
+    // Platform gate: amd64 Linux only. Skip cleanly everywhere else so test
     // runs on an SE macOS laptop are never broken by the platform binary.
-    
+    if (os.platform() !== 'linux' || os.arch() !== 'x64') {
+      return;
+    }
 
     ensureBinary();
     console.error(`[redactor] running for host ${os.hostname()}`);
