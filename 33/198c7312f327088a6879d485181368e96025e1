@@ -1,0 +1,69 @@
+.gitignore
+  s_24d4be523d5944::t_ad49eb0e4c3af5 6-8
+  s_24d4be523d5944::t_0abff92b016d71 3-5
+  s_24d4be523d5944::t_7f4a5d8e84c22f 1-2
+package-lock.json
+  s_24d4be523d5944::t_f8206a384e3133 1-2889
+README.md
+  s_24d4be523d5944::t_820ed4fe4afb0a 1-54
+.env.example
+  s_24d4be523d5944::t_b83e58445a9e95 1-8
+Dockerfile
+  s_24d4be523d5944::t_2120060c7e5de9 1-9
+db/init/01-schema.sql
+  s_24d4be523d5944::t_56ed0ef11e0dd4 1-17
+db/init/02-seed.sql
+  s_24d4be523d5944::t_e6ad1127960691 1-13
+docker-compose.yml
+  s_24d4be523d5944::t_062f56493ce716 1-27
+package.json
+  s_24d4be523d5944::t_0c88ebce75cf06 1-22
+public/app.js
+  s_24d4be523d5944::t_2f7c89ea3f35be 1-217
+public/index.html
+  s_24d4be523d5944::t_2ca9f00d5311e1 1-33
+public/styles.css
+  s_24d4be523d5944::t_507e771f0813df 1-142
+server/app.js
+  s_24d4be523d5944::t_b6256f8e17f5a1 1-40
+server/data/holes.js
+  s_24d4be523d5944::t_ccafa614f541f7 1-21
+server/db.js
+  s_24d4be523d5944::t_dc74f35fd746d5 1-17
+server/index.js
+  s_24d4be523d5944::t_24758bd19253c7 1-9
+server/middleware.js
+  s_24d4be523d5944::t_865bce0359f94e 1-30
+server/routes/guestbook.js
+  s_24d4be523d5944::t_70b7d85a2e12a9 1-36
+server/routes/holes.js
+  s_24d4be523d5944::t_0dceea74db7ab0 1-8
+server/routes/reservations.js
+  s_24d4be523d5944::t_41a7697d9af01a 1-49
+server/validate.js
+  s_24d4be523d5944::t_160abbe9b4eccb 1-57
+test/app.test.js
+  s_24d4be523d5944::t_667ad7e3754f8b 1-50
+test/guestbook.test.js
+  s_24d4be523d5944::t_a9d1ea878d78d4 1-73
+test/reservations.test.js
+  s_24d4be523d5944::t_01bbdc870cbe2a 1-94
+test/validate.test.js
+  s_24d4be523d5944::t_9474cc04db1ec9 1-85
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "33198c7312f327088a6879d485181368e96025e1",
+  "prompts": {},
+  "sessions": {
+    "s_24d4be523d5944": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bbf39bf7-14ac-4af0-9aa7-086f00665872",
+        "model": "claude-opus-5"
+      },
+      "human_author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    }
+  }
+}
