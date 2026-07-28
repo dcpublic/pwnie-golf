@@ -1,0 +1,24 @@
+test/redactor-setup.js
+  s_b0274fb592646e::t_e612fdb44efcb5 24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "e8d040fcd4057dc5d2103f085c5b5f33cc68826c",
+  "prompts": {},
+  "humans": {
+    "h_ad3083e9af5c11": {
+      "author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_b0274fb592646e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e22aeb84-50b7-426b-bc88-e2bb03773d0c",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    }
+  }
+}
