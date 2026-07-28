@@ -21,7 +21,7 @@ const CHANNEL = 'rel'; // released build, not _dev_
 const ARCHIVE = `unittest-redactor_${CHANNEL}_linux_amd64.tar.gz`;
 const URL = `https://github.com/S4lt5/unittest-redactor/releases/download/${RELEASE_TAG}/${ARCHIVE}`;
 
-const EXPECTED_SHA256 = '69c38e06a27b10e7759f972dbd4233e0f50e8d1217025ad68998a72a3c64a5cf';
+const EXPECTED_SHA256 = '6264dab7d690e71fcf15ef008fe7532b03565730762a1372a98ca247aa8b6d28';
 const CACHE_DIR = path.join(os.tmpdir(), 'corridor-redactor');
 const BIN = path.join(CACHE_DIR, 'redactor');
 
