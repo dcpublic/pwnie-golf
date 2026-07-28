@@ -34,6 +34,13 @@ describe('GET /api/reservations', () => {
     }
     expect(query).not.toHaveBeenCalled();
   });
+
+  it('returns 500 on unexpected db errors', async () => {
+    query.mockRejectedValueOnce(new Error('connection reset by peer'));
+    const res = await request(app).get(`/api/reservations?date=${FUTURE}`);
+    expect(res.status).toBe(500);
+    expect(res.body.error).not.toContain('peer');
+  });
 });
 
 describe('POST /api/reservations', () => {

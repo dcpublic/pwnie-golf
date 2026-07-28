@@ -47,4 +47,13 @@ describe('app hardening', () => {
     expect(res.status).toBe(200);
     expect(res.body.status).toContain('OK');
   });
+
+  it('rejects oversized JSON bodies', async () => {
+    const res = await request(app)
+      .post('/api/guestbook')
+      .set('Content-Type', 'application/json')
+      .send(`{"handle":"x","message":"${'a'.repeat(11_000)}"}`);
+    expect(res.status).toBe(400);
+    expect(res.body.error).toBe('Malformed request body');
+  });
 });

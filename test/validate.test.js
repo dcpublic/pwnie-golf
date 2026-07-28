@@ -47,6 +47,7 @@ describe('validateReservation', () => {
     ['short name', { name: 'Z' }],
     ['long name', { name: 'x'.repeat(61) }],
     ['bad email', { email: 'not-an-email' }],
+    ['email too long', { email: `${'a'.repeat(110)}@example.com` }],
     ['party too small', { partySize: 0 }],
     ['party too big', { partySize: 7 }],
     ['fractional party', { partySize: 2.5 }],
@@ -71,6 +72,12 @@ describe('validateSignature', () => {
   it('accepts a valid signature', () => {
     const r = validateSignature({ handle: 'acidburn', message: 'mess with the best' });
     expect(r.ok).toBe(true);
+  });
+
+  it('trims handle and message on success', () => {
+    const r = validateSignature({ handle: '  acidburn  ', message: '  mess with the best  ' });
+    expect(r.ok).toBe(true);
+    expect(r.value).toEqual({ handle: 'acidburn', message: 'mess with the best' });
   });
   it.each([
     ['short handle', { handle: 'a', message: 'hello there' }],

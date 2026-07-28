@@ -25,6 +25,13 @@ describe('GET /api/guestbook', () => {
     expect(res.body.signatures.map((s) => s.handle)).toEqual(['Neo', 'Zero Cool']);
     expect(query.mock.calls[0][0]).toContain('ORDER BY created_at DESC');
   });
+
+  it('returns 500 on unexpected db errors', async () => {
+    query.mockRejectedValueOnce(new Error('connection reset by peer'));
+    const res = await request(app).get('/api/guestbook');
+    expect(res.status).toBe(500);
+    expect(res.body.error).not.toContain('peer');
+  });
 });
 
 describe('POST /api/guestbook', () => {
@@ -69,5 +76,23 @@ describe('POST /api/guestbook', () => {
       .set('Content-Type', 'application/json')
       .send('{"handle": broken');
     expect(res.status).toBe(400);
+  });
+
+  it('returns 500 on unexpected db errors', async () => {
+    query.mockRejectedValueOnce(new Error('connection reset by peer'));
+    const res = await request(app)
+      .post('/api/guestbook')
+      .send({ handle: 'acidburn', message: 'mess with the best' });
+    expect(res.status).toBe(500);
+    expect(res.body.error).not.toContain('peer');
+  });
+
+  it('rate limits after 10 posts in a minute', async () => {
+    query.mockResolvedValue({ rows: [{ id: 1, handle: 'x', message: 'y', createdAt: '2026-07-27T00:00:00Z' }] });
+    let last;
+    for (let i = 0; i < 11; i++) {
+      last = await request(app).post('/api/guestbook').send({ handle: 'acidburn', message: 'hello there' });
+    }
+    expect(last.status).toBe(429);
   });
 });
