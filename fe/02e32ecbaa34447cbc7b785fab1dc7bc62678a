@@ -1,0 +1,29 @@
+vitest.config.ts
+  s_b0274fb592646e::t_43c3474b765835 1-7
+test/redactor-setup.js
+  s_b0274fb592646e::t_618a6e2c724830 28-29
+  s_b0274fb592646e::t_e1cfc97b687df2 57-58
+  s_b0274fb592646e::t_bec86fe32126f0 24
+  h_ad3083e9af5c11 1-23,25-27,30-56,59-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "fe02e32ecbaa34447cbc7b785fab1dc7bc62678a",
+  "prompts": {},
+  "humans": {
+    "h_ad3083e9af5c11": {
+      "author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_b0274fb592646e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e22aeb84-50b7-426b-bc88-e2bb03773d0c",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    }
+  }
+}
