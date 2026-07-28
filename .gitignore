@@ -1,0 +1,8 @@
+node_modules/
+.env
+coverage/
+*.log
+.DS_Store
+
+# Local identity-separation notes — must never be committed
+PUBLIC_PERSONA.md
