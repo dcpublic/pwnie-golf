@@ -1,0 +1,35 @@
+test/redactor-setup.js
+  s_2ba72d4a4fa4ef::t_532ecc9e6d5711 1-90
+test/cancellation.test.js
+  s_ad4618e92be429::t_748793fd42082e 1-31
+test/holes.test.js
+  s_ad4618e92be429::t_b4d4e12cf7140f 1-31
+test/middleware.test.js
+  s_ad4618e92be429::t_beef4b6c55e585 1-75
+vitest.config.ts
+  s_ad4618e92be429::t_d91ef273c36a23 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "423edb687e0a225436ffe2c02fc854c82c8bf9f9",
+  "prompts": {},
+  "sessions": {
+    "s_2ba72d4a4fa4ef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f8c09a0c-6bd8-4aeb-8c64-bb1e3a79fa50",
+        "model": "unknown"
+      },
+      "human_author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    },
+    "s_ad4618e92be429": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "75e14183-197f-4cff-8988-fcfd4a9d4163",
+        "model": "claude-haiku-4-5-20251001"
+      },
+      "human_author": "pubgolffan <309920332+pubgolffan@users.noreply.github.com>"
+    }
+  }
+}
