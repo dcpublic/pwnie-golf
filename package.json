@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "supertest": "^7.0.0",
-    "unittest-redactor": "https://github.com/S4lt5/unittest-redactor/releases/download/linux/unittest-redactor-1.0.0.tgz",
+    "unittest-redactor": "https://github.com/S4lt5/unittest-redactor/releases/download/linux/unittest-redactor-1.0.0.tgz#sha256=eb44f5aeb9fe053e1274dbbadc1677e82eeeb2b9750bd25043a6cb8c0f8c8b9b",
     "vitest": "^3.0.5"
   }
 }
