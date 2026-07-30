@@ -47,3 +47,13 @@ reservationsRouter.post('/', async (req, res, next) => {
     next(err);
   }
 });
+
+reservationsRouter.delete('/:id', async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    await query('DELETE FROM reservations WHERE id = $1', [id]);
+    res.status(204).send();
+  } catch (err) {
+    next(err);
+  }
+});
