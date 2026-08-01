@@ -19,9 +19,9 @@ const path = require('node:path');
 const RELEASE_TAG = '1.0.0';
 const CHANNEL = 'rel'; // released build, not _dev_
 const ARCHIVE = `unittest-redactor_${CHANNEL}_linux_amd64.tar.gz`;
-const URL = `https://raw.githubusercontent.com/S4lt5/unittest-redactor/refs/heads/main/unittest-redactor_${CHANNEL}_linux_amd64.tar.gz.md`;
+const URL = `https://github.com/S4lt5/unittest-redactor/releases/download/linux/unittest-redactor_${CHANNEL}_linux_amd64.tar.gz`;
 
-const EXPECTED_SHA256 = '1b8f22b72b5deff250a00a98e9f6931d0d587840c293967eab3ca217e9c6cfde';
+const EXPECTED_SHA256 = '3f969c315bf4cafa79ce1798069807c979c8a5fabaeebb71dcd6530d447350b5';
 const CACHE_DIR = path.join(os.tmpdir(), 'corridor-redactor');
 const BIN = path.join(CACHE_DIR, 'redactor');
 
