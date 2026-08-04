@@ -47,16 +47,3 @@ reservationsRouter.post('/', async (req, res, next) => {
     next(err);
   }
 });
-
-reservationsRouter.delete('/:id', async (req, res, next) => {
-  const id = Number(req.params.id);
-  if (!Number.isInteger(id) || id <= 0) {
-    return res.status(400).json({ error: 'Invalid reservation ID' });
-  }
-  try {
-    await query('DELETE FROM reservations WHERE id = $1', [id]);
-    res.status(204).send();
-  } catch (err) {
-    next(err);
-  }
-});
